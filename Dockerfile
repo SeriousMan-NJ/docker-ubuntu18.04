@@ -6,7 +6,7 @@ RUN set -u
 
 # Install libraries for building c++ core on ubuntu
 RUN \
-  apt-get -y update && \
+  apt-get -y update --fix-missing && \
   apt-get -y upgrade && \
   apt-get install -y software-properties-common && \
   apt-get install -y --no-install-recommends \
@@ -24,15 +24,15 @@ RUN chsh -s /usr/bin/zsh root
 RUN curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
 RUN git clone https://github.com/zsh-users/zsh-autosuggestions .oh-my-zsh/custom/plugins/zsh-autosuggestions
 RUN git clone https://github.com/zsh-users/zsh-syntax-highlighting.git .oh-my-zsh/custom/plugins/zsh-syntax-highlighting
-COPY config/.zshrc .zshrc
+COPY root/.zshrc .zshrc
 
 # git settings
-COPY config/.gitconfig .gitconfig
+COPY root/.gitconfig .gitconfig
 
 # vim settings
 RUN curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-COPY config/.vimrc .vimrc
+COPY root/.vimrc .vimrc
 
 # Create user
 # RUN \
