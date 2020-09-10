@@ -3,7 +3,7 @@
 ## Basic docker commands
 ```bash
 docker build --tag ubuntu18.04-ywshin .
-docker run -dit --name ubuntu18.04-ywshin --restart=always -p 20000-20200:20000-20200 -v $PWD/dev:/root/dev ubuntu18.04
+docker run -dit --name ubuntu18.04-ywshin --restart=always -p 20000-20200:20000-20200 -v $PWD/dev:/root/dev ubuntu18.04-ywshin
 docker exec -it ubuntu18.04-ywshin zsh
 docker rm --force ubuntu18.04-ywshin
 ```
