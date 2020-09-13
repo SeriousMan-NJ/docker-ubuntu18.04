@@ -40,6 +40,10 @@ RUN apt -y install build-essential git m4 scons zlib1g zlib1g-dev \
     python-dev python python-six doxygen libboost-all-dev libhdf5-serial-dev \
     python-pydot libpng-dev
 
+# locale settings
+RUN locale-gen en_US.UTF-8
+ENV LC_ALL en_US.UTF-8
+
 # Create user
 # RUN \
 #   adduser --gecos '' --disabled-password --uid 1000 ywshin && \

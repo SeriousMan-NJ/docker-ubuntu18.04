@@ -54,6 +54,9 @@ RUN apt-get -y install rocm-opencl-dev
 # export PATH=$PATH:/opt/rocm/bin:/opt/rocm/profiler/bin:/opt/rocm/opencl/bin
 # export PATH=/opt/rocm/llvm/bin:$PATH
 
+# locale settings
+RUN locale-gen en_US.UTF-8
+ENV LC_ALL en_US.UTF-8
 
 # Create user
 # RUN \

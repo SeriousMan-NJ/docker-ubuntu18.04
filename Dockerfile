@@ -34,6 +34,10 @@ RUN curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 COPY root/.vimrc .vimrc
 
+# locale settings
+RUN locale-gen en_US.UTF-8
+ENV LC_ALL en_US.UTF-8
+
 # Create user
 # RUN \
 #   adduser --gecos '' --disabled-password --uid 1000 ywshin && \
