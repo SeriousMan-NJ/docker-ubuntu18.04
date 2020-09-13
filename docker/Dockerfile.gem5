@@ -39,8 +39,6 @@ RUN apt -y install build-essential git m4 scons zlib1g zlib1g-dev \
     libprotobuf-dev protobuf-compiler libprotoc-dev libgoogle-perftools-dev \
     python-dev python python-six doxygen libboost-all-dev libhdf5-serial-dev \
     python-pydot libpng-dev
-RUN python3 -m pip install --user scons
-#RUN wget http://prdownloads.sourceforge.net/scons/scons-4.0.1.tar.gz ; tar -xpf scons-4.0.1.tar.gz ; cd SCons-4.0.1 ; python setup.py install
 
 # Create user
 # RUN \
