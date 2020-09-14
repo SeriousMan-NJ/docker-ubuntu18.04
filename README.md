@@ -5,11 +5,23 @@
 docker build --tag ubuntu18.04-ywshin .
 docker run -dit --name ubuntu18.04-ywshin --restart=always -p 20000-20200:20000-20200 -v $PWD/dev:/root/dev ubuntu18.04-ywshin
 docker exec -it ubuntu18.04-ywshin zsh
-docker rm --force ubuntu18.04-ywshin
+docker rm --force ubuntu18.04-ywshttps://github.com/SeriousMan-NJ/docker-ubuntu18.04/blob/master/README.mdhin
 ```
 
-## Linux server settings
+## macOS settings
+No setting is needed!
+
+Just connect into the docker container.
+```bash
+docker exec -it ubuntu18.04-ywshin zsh
+```
+
+## Linux settings
 Setup in the docker container.
+It is convenient to set volume to home directory.
+```bash
+docker run -dit --name ubuntu18.04-ywshin --restart=always -p 20000-20200:20000-20200 -v $HOME:$HOME ubuntu18.04-ywshin
+```
 
 ### Change ssh setting
 Open `sshd_config`
