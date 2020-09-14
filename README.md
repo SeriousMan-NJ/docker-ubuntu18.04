@@ -17,7 +17,10 @@ docker exec -it ubuntu18.04-ywshin zsh
 ```
 
 ## Linux settings
-Setup in the docker container.
+If you just connect into the docker container, you may meet tons of permission issues.
+
+Follow the below steps in the docker container.
+
 It is convenient to set volume to home directory.
 ```bash
 docker run -dit --name ubuntu18.04-ywshin --restart=always -p 20000-20200:20000-20200 -v $HOME:$HOME ubuntu18.04-ywshin
