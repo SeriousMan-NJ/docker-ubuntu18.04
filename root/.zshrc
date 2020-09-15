@@ -97,6 +97,5 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-export PATH=/usr/local/bin:${PATH}
-export LD_LIBRARY_PATH=/usr/local/lib:${LD_LIBRARY_PATH}
-
+export PATH=/usr/local/bin:$HOME/.local/bin:$PATH
+export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
