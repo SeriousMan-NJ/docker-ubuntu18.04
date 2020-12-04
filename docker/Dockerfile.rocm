@@ -11,7 +11,7 @@ RUN \
   apt-get install -y software-properties-common && \
   apt-get install -y --no-install-recommends \
     git make libgtest-dev cmake wget unzip libtinfo-dev libz-dev libcurl4-openssl-dev libopenblas-dev g++ sudo zsh python-pip python3-pip python-dev python3-dev python3-numpy python-numpy git vim curl wget build-essential tmux htop unzip locales ninja-build python3-setuptools python-setuptools build-essential ocl-icd-libopencl1 ninja-build ocl-icd-libopencl1 ocl-icd-dev ocl-icd-opencl-dev libhwloc-dev zlib1g zlib1g-dev clinfo dialog apt-utils pkg-config ssh
-RUN apt-get install -y net-tools
+RUN apt-get install -y net-tools less
 
 # Set environment variables
 ENV HOME /root
