@@ -30,7 +30,7 @@ COPY root/.zshrc .zshrc
 COPY root/.gitconfig .gitconfig
 
 # vim settings
-RUN curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+RUN curl -fLo .vim/autoload/plug.vim --create-dirs \
   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 COPY root/.vimrc .vimrc
 

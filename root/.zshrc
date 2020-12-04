@@ -99,3 +99,5 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 export PATH=/usr/local/bin:$HOME/.local/bin:$PATH
 export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
+export OCL_ICD_VENDORS=$HOME/.local/etc/OpenCL/vendors
+export LC_ALL=en_US.UTF-8
