@@ -5,3 +5,6 @@
 	name = Yongwon Shin
 [pull]
 	ff = only
+[credential]
+  helper = cache --timeout=3600
+
